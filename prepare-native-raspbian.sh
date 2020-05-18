@@ -25,7 +25,8 @@ echo ""
 if [ ! -z "$MISSING_PKGS" ]; then
 	echo "You are missing required packages."
 	echo "Run sudo apt-get update && sudo apt-get install $MISSING_PKGS"
-	exit 1
+	echo "(press enter to continue anyway, or ctrl-c to stop)"
+	( read xyz )
 else
 	echo "All dependencies met"
 fi
